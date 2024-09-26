@@ -28,3 +28,6 @@ print(num(87))
 
 addition  = lambda x,y:x+y
 print(addition(10,20))
+
+even = lambda num:num%2==0
+print(even(90))
