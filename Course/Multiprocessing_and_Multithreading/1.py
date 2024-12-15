@@ -9,10 +9,12 @@ import time
 
 def print_numbers():
     for i in range(5):
+        time.sleep(2)  #makes the functions wait or sleep for 2 secs before moving forward
         print(f"Number:{i}")
 
 def print_letters():
     for letter in "abcde":
+        time.sleep(2)
         print(f"Letter:{letter}")
 
 t = time.time()
