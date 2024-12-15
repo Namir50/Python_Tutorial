@@ -18,6 +18,15 @@ def print_letters():
         print(f"Letter:{letter}")
 
 t = time.time()
-print_numbers()
-print_letters()
+# Creating threads
+t1 = threading.Thread(target = print_numbers)
+t2 = threading.Thread(target= print_letters)
+
+#Starting threads
+t1.start()
+t2.start()
+
+#Wait for threads to complete
+t1.join()
+t2.join()
 print(f"Time take: {time.time() - t}")
