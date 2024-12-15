@@ -15,7 +15,7 @@ def print_letters():
     for letter in "abcde":
         print(f"Letter:{letter}")
 
-t = time.now()
+t = time.time()
 print_numbers()
 print_letters()
-print(f"Time take: {time.now() - t}")
+print(f"Time take: {time.time() - t}")
