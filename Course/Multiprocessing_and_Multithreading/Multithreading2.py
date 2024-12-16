@@ -11,5 +11,10 @@ def my_surname():
     for j in "Shah":
         print(f"Letter in my surname{j}")
 
-t = time.time()
+t = time.time() 
 
+t1 = threading.Thread(target=my_name)
+t2 = threading.Thread(target=my_surname)
+
+t1.start()
+t2.start()
