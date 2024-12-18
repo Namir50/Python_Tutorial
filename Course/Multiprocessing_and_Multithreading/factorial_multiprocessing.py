@@ -11,8 +11,10 @@ def factorial(number):
 number = [10,143,23]
 
 if __name__ == "__main__":
+    t = time.time()
     with ProcessPoolExecutor(max_workers=3) as executor:
         results = executor.map(factorial,number)
 
     for result in results:
         print(result)
+    print(f"Time taken: {time.time()-t}")
