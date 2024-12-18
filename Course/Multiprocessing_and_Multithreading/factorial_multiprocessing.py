@@ -1,18 +1,18 @@
 from concurrent.futures import ProcessPoolExecutor
 import time
 
-
 def factorial(number):
     result = 1
     time.sleep(1)
     for i in range(1,number+1):
         result = result * i    
-    print(result)
+    return result
 
-number = [10,235,5435]
+number = [10,143,23]
 
-with ProcessPoolExecutor(max_workers=3) as executor:
-    results = executor.map(factorial,number)
+if __name__ == "__main__":
+    with ProcessPoolExecutor(max_workers=3) as executor:
+        results = executor.map(factorial,number)
 
-for result in results:
-    print(result)
+    for result in results:
+        print(result)
